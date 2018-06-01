@@ -73,6 +73,7 @@ def train(args):
 
             y = utils.normalize_batch(y)
             x = utils.normalize_batch(x)
+            x = x.to(device)
 
             features_y = vgg(y)
             features_x = vgg(x)
